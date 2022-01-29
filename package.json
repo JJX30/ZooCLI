@@ -1,0 +1,31 @@
+{
+  "name": "zoocli",
+  "version": "1.0.0",
+  "description": "A whole interactive Zoo within the comfort of your own command line interface.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJX30/ZooCLI.git"
+  },
+  "keywords": [
+    "ASCII, art, CLI, zoo, animals, command, line, interface, for fun, sick"
+  ],
+  "author": "Mauricio Del Castillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JJX30/ZooCLI/issues"
+  },
+  "homepage": "https://github.com/JJX30/ZooCLI#readme",
+  "dependencies": {
+    "@miqilin21/node-player": "^1.0.4",
+    "chalk": "^5.0.0",
+    "chalk-animation": "^1.3.0",
+    "figlet": "^1.5.2",
+    "gradient-string": "^2.0.0",
+    "play-sound": "^1.1.5"
+  }
+}
