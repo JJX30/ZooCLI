@@ -834,7 +834,7 @@ _  . _ . -~\\        _ ..  _          ~~--.\`_. . . . . ~-_     ,-','\`  .
   },
   {
     name: "Amoeba",
-    type: "It's an Amoeba",
+    type: "It's an Amoeba!",
     biome: "city",
     color: "",
     ascii: `             ,,,,,,,,
