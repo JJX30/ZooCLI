@@ -1,6 +1,6 @@
 let animalData = [
   {
-    name: "Dog",
+    name: "Dog       ",
     type: "Canis lupus familiaris",
     biome: "forest",
     color: "",
@@ -14,7 +14,7 @@ let animalData = [
     rarity: "common",
   },
   {
-    name: "Alligator",
+    name: "Alligator ",
     type: "Alligator mississippiensis",
     biome: "city",
     color: "",
@@ -28,7 +28,7 @@ let animalData = [
     rarity: "epic",
   },
   {
-    name: "Hippo",
+    name: "Hippo     ",
     type: "Hippopotamus amphibius",
     biome: "forest",
     color: "",
@@ -42,7 +42,7 @@ let animalData = [
     rarity: "rare",
   },
   {
-    name: "Scorpion",
+    name: "Scorpion  ",
     type: "Scorpiones",
     biome: "desert",
     color: "",
@@ -62,7 +62,7 @@ let animalData = [
     rarity: "common",
   },
   {
-    name: "Aardvark",
+    name: "Aardvark  ",
     type: "Orycteropus afer",
     biome: "forest",
     color: "",
@@ -82,7 +82,7 @@ let animalData = [
     rarity: "rare",
   },
   {
-    name: "Camel",
+    name: "Camel     ",
     type: "Camelus",
     biome: "desert",
     color: "",
@@ -106,7 +106,7 @@ let animalData = [
     rarity: "common",
   },
   {
-    name: "Hum. bird",
+    name: "Hum. bird ",
     type: "Trochilidae",
     biome: "sky",
     color: "",
@@ -117,7 +117,7 @@ let animalData = [
     rarity: "legendary",
   },
   {
-    name: "Eagle",
+    name: "Eagle     ",
     type: "Haliaeetus leucocephalus",
     biome: "sky",
     color: "",
@@ -134,7 +134,7 @@ let animalData = [
     rarity: "rare",
   },
   {
-    name: "Owl",
+    name: "Owl       ",
     type: "Strigiformes",
     biome: "sky",
     color: "",
@@ -145,7 +145,7 @@ let animalData = [
     rarity: "common",
   },
   {
-    name: "Bat",
+    name: "Bat       ",
     type: "Chiroptera",
     biome: "city",
     color: "",
@@ -159,7 +159,7 @@ let animalData = [
     rarity: "rare",
   },
   {
-    name: "Otter",
+    name: "Otter     ",
     type: "Lutrinae",
     biome: "sea",
     color: "",
@@ -176,14 +176,14 @@ let animalData = [
     rarity: "common",
   },
   {
-    name: "Lobster",
+    name: "Lobster   ",
     type: "Nephropidae",
     biome: "sea",
     color: "",
     ascii: `                         ,.---.   
                ,,,,     /    _ \`.
                 \\\\\\\\   /      \\  )
-                 |||| /\\/``-.__\\/
+                 |||| /\\/\`\`-.__\\/
                  ::::/\\/_
  {{\`-.__.-'(\`(^^(^^^(^ 9 \`.========='
 {{{{{{ { ( ( (  (   (-----:=
@@ -217,7 +217,7 @@ let animalData = [
     rarity: "rare",
   },
   {
-    name: "Platypus",
+    name: "Platypus  ",
     type: "Ornithorhynchus anatinus",
     biome: "sea",
     color: "",
@@ -231,7 +231,7 @@ let animalData = [
     rarity: "common",
   },
   {
-    name: "Whale",
+    name: "Whale     ",
     type: "Cetacea",
     biome: "sea",
     color: "",
@@ -253,7 +253,7 @@ let animalData = [
     rarity: "epic",
   },
   {
-    name: "Fish",
+    name: "Fish      ",
     type: "Carassius auratus",
     biome: "sea",
     color: "",
@@ -266,7 +266,7 @@ let animalData = [
     rarity: "common",
   },
   {
-    name: "Mouse",
+    name: "Mouse     ",
     type: "Mus musculus",
     biome: "city",
     color: "",
@@ -284,7 +284,7 @@ let animalData = [
     rarity: "rare",
   },
   {
-    name: "Cockroach",
+    name: "Cockroach ",
     type: "Blattodea",
     biome: "city",
     color: "",
@@ -306,7 +306,7 @@ let animalData = [
     rarity: "common",
   },
   {
-    name: "Ant",
+    name: "Ant       ",
     type: "Formicidae",
     biome: "city",
     color: "",
@@ -317,7 +317,7 @@ let animalData = [
     rarity: "common",
   },
   {
-    name: "Bear",
+    name: "Bear      ",
     type: "Ursus arctos",
     biome: "forest",
     color: "",
@@ -337,7 +337,7 @@ let animalData = [
     rarity: "epic",
   },
   {
-    name: "Lizard",
+    name: "Lizard    ",
     type: "Anolis sagrei",
     biome: "desert",
     color: "",
@@ -351,7 +351,7 @@ let animalData = [
     rarity: "common",
   },
   {
-    name: "Tricera.",
+    name: "Tricera.  ",
     type: "Ceratopsidae",
     biome: "forest",
     color: "",
@@ -368,7 +368,7 @@ let animalData = [
     rarity: "legendary",
   },
   {
-    name: "Ankylo.",
+    name: "Ankylo.   ",
     type: "Ankylosauridae",
     biome: "desert",
     color: "",
@@ -387,7 +387,7 @@ let animalData = [
     rarity: "legendary",
   },
   {
-    name: "Brachio.",
+    name: "Brachio.  ",
     type: "Saurischia",
     biome: "mountain",
     color: "",
@@ -413,7 +413,7 @@ let animalData = [
     rarity: "legendary",
   },
   {
-    name: "V-Raptor",
+    name: "V-Raptor  ",
     type: "Dromaeosauridae",
     biome: "sea",
     color: "",
@@ -441,7 +441,7 @@ __________                                     | : '. |
     rarity: "legendary",
   },
   {
-    name: "Snake",
+    name: "Snake     ",
     type: "Serpentes",
     biome: "desert",
     color: "",
@@ -464,7 +464,7 @@ __________                                     | : '. |
     rarity: "epic",
   },
   {
-    name: "Turtle",
+    name: "Turtle    ",
     type: "Testudines",
     biome: "forest",
     color: "",
@@ -477,7 +477,7 @@ __________                                     | : '. |
     rarity: "rare",
   },
   {
-    name: "Donkey",
+    name: "Donkey    ",
     type: "Equus asinus",
     biome: "desert",
     color: "",
@@ -503,7 +503,7 @@ __________                                     | : '. |
     rarity: "rare",
   },
   {
-    name: "Unicorn",
+    name: "Unicorn   ",
     type: "Equus unicornus",
     biome: "mountain",
     color: "",
@@ -550,7 +550,7 @@ J     \\         /._           /        -tI/ |
     rarity: "legendary",
   },
   {
-    name: "Dolphin",
+    name: "Dolphin   ",
     type: "Delphinus",
     biome: "sea",
     color: "",
@@ -574,7 +574,7 @@ _  . _ . -~\\        _ ..  _          ~~--.\`_. . . . . ~-_     ,-','\`  .
     rarity: "rare",
   },
   {
-    name: "Elephant",
+    name: "Elephant  ",
     type: "Loxodonta",
     biome: "desert",
     color: "",
@@ -599,7 +599,7 @@ _  . _ . -~\\        _ ..  _          ~~--.\`_. . . . . ~-_     ,-','\`  .
     rarity: "epic",
   },
   {
-    name: "Cat",
+    name: "Cat       ",
     type: "Felis catus",
     biome: "forest",
     color: "",
@@ -622,7 +622,7 @@ _  . _ . -~\\        _ ..  _          ~~--.\`_. . . . . ~-_     ,-','\`  .
     rarity: "common",
   },
   {
-    name: "Moose",
+    name: "Moose     ",
     type: "Alces alces",
     biome: "forest",
     color: "",
@@ -652,7 +652,7 @@ _  . _ . -~\\        _ ..  _          ~~--.\`_. . . . . ~-_     ,-','\`  .
                 \`;;    ;;;  :::\`\`;;; ;;;,,;;,;;,,;;,;;;;;( ; .. :.; (
                  \`;;;     __    :: (;;;;;;;;;;;;;;;;;;;;;_\\  ; ;. ; :
                   \`;;;;;;\`;:"\\";;:/""\`\`\`\`\`\`\`\`\`\`\`\`\`"""""    \\;;;. / :(
-                    ```` \\:::|;;;/                          \\;;;;| :\\
+                    \`\`\`\` \\:::|;;;/                          \\;;;;| :\\
                           |::;;;;;                           ":;;;|::\\
                           ::;\\;;;;                            ":;;\\::(
                           ::; \\;;|                             \\;;(:::)
@@ -666,7 +666,7 @@ _  . _ . -~\\        _ ..  _          ~~--.\`_. . . . . ~-_     ,-','\`  .
     rarity: "common",
   },
   {
-    name: "Deer",
+    name: "Deer      ",
     type: "Cervidae",
     biome: "forest",
     color: "",
@@ -698,7 +698,7 @@ _  . _ . -~\\        _ ..  _          ~~--.\`_. . . . . ~-_     ,-','\`  .
     rarity: "common",
   },
   {
-    name: "Cow",
+    name: "Cow       ",
     type: "Bos taurus",
     biome: "forest",
     color: "",
@@ -727,7 +727,7 @@ _  . _ . -~\\        _ ..  _          ~~--.\`_. . . . . ~-_     ,-','\`  .
     rarity: "common",
   },
   {
-    name: "Rabbit",
+    name: "Rabbit    ",
     type: "Oryctolagus cuniculus",
     biome: "forest",
     color: "",
@@ -921,7 +921,7 @@ l   .-~~"-.    /    I
     rarity: "epic",
   },
   {
-    name: "Tasmanian Devil",
+    name: "Tas. Dev'l",
     type: "Sarcophilus harrisii",
     biome: "city",
     color: "",
@@ -945,7 +945,7 @@ l   .-~~"-.    /    I
     rarity: "epic",
   },
   {
-    name: "Frog",
+    name: "Frog      ",
     type: "Rhinella marina",
     biome: "city",
     color: "",
@@ -960,3 +960,4 @@ l   .-~~"-.    /    I
     rarity: "common",
   },
 ];
+export default animalData;
