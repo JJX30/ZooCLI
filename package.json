@@ -29,6 +29,7 @@
     "gradient-string": "^2.0.0",
     "inquirer": "^8.2.0",
     "inquirer-autocomplete-prompt": "^1.4.0",
+    "nanospinner": "^1.0.0",
     "play-sound": "^1.1.5"
   }
 }

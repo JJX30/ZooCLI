@@ -5,6 +5,7 @@ import gradient from "gradient-string";
 import introFrames from "./introFrames.js";
 import titleFrames from "./titleFrames.js";
 import inquirer from "inquirer";
+import { createSpinner } from "nanospinner";
 
 let usersAnimals = [
   {
@@ -363,6 +364,12 @@ async function explore() {
   await displayEncounter();
 }
 
+async function displayEncounter() {
+  const randomVal = getRandomInt(1, 100);
+  if (randomVal >= 1 && randomVal <= 5) {
+  }
+}
+
 async function displayAnimalList() {
   console.log(
     titleGradient(`                    _ _.-'\`-._ _
@@ -473,15 +480,26 @@ async function handleReturnMenu(choice, selectedAnimal) {
   if (choice === "Release") {
     for (let i = 0; i < usersAnimals.length; i++) {
       if (selectedAnimal.name === usersAnimals[i].name) {
+        const spinner = createSpinner(
+          "Releasing " + selectedAnimal.name + "..."
+        ).start();
+        await exploring();
         usersAnimals.splice(i, 1);
-        console.log(selectedAnimal.name + "released back into the wild");
-        await sleep();
+        spinner.success({
+          text: selectedAnimal.name + " was released back into the wild!",
+        });
         await enterZoo();
       }
     }
   } else {
     await enterZoo();
   }
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 
 Object.defineProperty(String.prototype, "capitalize", {
