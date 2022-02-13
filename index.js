@@ -1,15 +1,10 @@
 #!/usr/bin/env node
 
 import chalk from "chalk";
-import chalkAnimation from "chalk-animation";
-import figlet from "figlet";
 import gradient from "gradient-string";
-import { nPlayer } from "@miqilin21/node-player";
 import introFrames from "./introFrames.js";
 import titleFrames from "./titleFrames.js";
-import encounterType from "./encouterType.js";
 import inquirer from "inquirer";
-import animalData from "./animalData.js";
 
 let usersAnimals = [
   {
@@ -17,6 +12,13 @@ let usersAnimals = [
     type: "Canis lupus familiaris",
     biome: "forest",
     color: "blue",
+    description: `
+Dogs can smell thousands of times better than humans. 
+Their noses have millions more scent receptors—for 
+example, a human nose averages 5 million while a 
+Dachshund's nose has 125 million—making them useful 
+in sniffing out drugs, dead bodies, bed bugs, 
+explosives, and more.`,
     ascii: `   |\\_/|                  
    | @ @   Woof! 
    |   <>              _  
@@ -31,6 +33,13 @@ ____|_       ___|   |___.'
     type: "Felis catus",
     biome: "forest",
     color: "green",
+    description: `
+Predation by domestic cats is the number-one direct, 
+human-caused threat to birds in the United States and 
+Canada. In the United States alone, outdoor cats kill 
+approximately 2.4 billion birds every year. Although 
+this number may seem unbelievable, it represents the 
+combined impact of tens of millions of outdoor cats.`,
     ascii: `                      _                        
                     \\\`*-.                    
                      )  _\`-.                 
@@ -54,6 +63,14 @@ ____|_       ___|   |___.'
     type: "Alces alces",
     biome: "forest",
     color: "rainbow",
+    description: `
+If an antler is knocked against a tree during the 
+velvet stage, it will bleed. ... At full size, 
+antlers harden beneath their velvet and the blood 
+supply stops. The dead and dry velvet peels off 
+in strips, aided by the bucks' vigorous rubbing 
+against trees and bushes. Most bucks shed their 
+antlers in January and February.`,
     ascii: `             ,
        ,   , |-_      ,           ,  ,
       (_  ,' ( \\)  :  |           ' ,'
@@ -98,6 +115,11 @@ ____|_       ___|   |___.'
     type: "Rhinella marina",
     biome: "city",
     color: "green",
+    description: `
+Frogs were the first land animals with vocal cords. Male 
+frogs have vocal sacs—pouches of skin that fill with air. 
+These balloons resonate sounds like a megaphone, and 
+some frog sounds can be heard from a mile away.`,
     ascii: `              _         _
   __   ___.--'_\`.     .'_\`--.___   __
  ( _\`.'. -   'o\` )   ( 'o\`   - .\`.'_ )
@@ -113,6 +135,14 @@ ____|_       ___|   |___.'
     type: "Sarcophilus harrisii",
     biome: "city",
     color: "yellow",
+    description: `
+Tasmanian 'devils' are named for the sound they make. In 
+fact, the first European settlers to enter Tasmania (the 
+southern state where they are found) began hearing 
+unearthly, blood-curdling shrieks and growls from 
+deep within the bush, making them imagine that 
+demons surrounded them in the wilderness. Hence: 
+Tasmanian 'devils'.`,
     ascii: `                                              ^             
                                              / \\           ^
                        _,-~~~--~~~--._      (   \\         / \\
@@ -137,6 +167,15 @@ ____|_       ___|   |___.'
     type: "Rhinocerotidae",
     biome: "desert",
     color: "orange",
+    description: `
+The names of black and white rhinos are misleading - as 
+both are actually grey. The white rhino is said to have 
+gotten its name from the Afrikaans word for wide ('wyd'), 
+referring to its wide, square lip (in contrast, black 
+rhinos have a pointy upper lip). Early English explorers 
+mistook this word for 'white' and consequently named 
+this species 'white' rhino, and the other 'black' rhino 
+to differentiate.`,
     ascii: `              _                 __                 
       __.--**"""**--...__..--**""""*-.            
     .'                                \`-.         
@@ -163,6 +202,13 @@ ____|_       ___|   |___.'
     type: "Macropodidae",
     biome: "city",
     color: "red",
+    description: `
+Unlike other animals, kangaroos are not born with muscles. 
+They are underdeveloped when they are born. Hence, joeys 
+stay in their mother's pouch. As they grow at around six 
+months, they have well-developed muscles other body parts 
+and they leave their mother's pouch and start hopping on 
+each foot.`,
     ascii: `                                                  _  _
                                                  (\\\\( \\
                                                   \`.\\-.)
@@ -198,7 +244,7 @@ const title = gradient("yellow", "orange")
 d8'       88.  .88 88.  .88    Y8.   .88 88        88
 Y8888888P \`88888P' \`88888P'     Y88888P' 88888888P dP`);
 
-const titleGradient = gradient("orange", "orange");
+const titleGradient = gradient("yellow", "orange");
 const jungleGradient = gradient(["#60DB0E", "#16A100"]);
 const antGradient = gradient([
   { color: "#FF0000", pos: 0.5 },
@@ -380,6 +426,7 @@ async function handleZooAnswer(choice) {
                                                                                                                                                                                      \n`
   );
   console.clear();
+
   console.log(jungleGradient.multiline(introFrames[introFrames.length - 1]));
 
   if (selectedAnimal.color === "rainbow") {
@@ -397,8 +444,17 @@ async function handleZooAnswer(choice) {
     )
   );
   console.log();
-  console.log(textGradient(`[animal info]`));
+  console.log(titleGradient.multiline(selectedAnimal.description));
   console.log();
+  console.log(
+    titleGradient("Scientific Name: " + selectedAnimal.type.capitalize())
+  );
+  console.log();
+  console.log(titleGradient("Found in: " + selectedAnimal.biome.capitalize()));
+  console.log();
+  console.log(titleGradient("Color: " + selectedAnimal.color.capitalize()));
+  console.log();
+  console.log(titleGradient("Rarity: " + selectedAnimal.rarity.capitalize()));
   await returnMenu(selectedAnimal);
 }
 
@@ -427,5 +483,13 @@ async function handleReturnMenu(choice, selectedAnimal) {
     await enterZoo();
   }
 }
+
+Object.defineProperty(String.prototype, "capitalize", {
+  value: function () {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+  },
+  enumerable: false,
+});
+
 await welcome();
 await mainMenu();
