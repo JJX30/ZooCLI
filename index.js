@@ -19,13 +19,13 @@ example, a human nose averages 5 million while a
 Dachshund's nose has 125 million—making them useful 
 in sniffing out drugs, dead bodies, bed bugs, 
 explosives, and more.`,
-    ascii: `   |\\_/|                  
-   | @ @   Woof! 
-   |   <>              _  
-   |  _/\\------____ ((| |))
-   |               \`--' |   
-____|_       ___|   |___.' 
-/_/_____/____/_______|`,
+    ascii: `                 |\\_/|                  
+                 | @ @   Woof! 
+                 |   <>              _  
+                 |  _/\\------____ ((| |))
+                 |               \`--' |   
+              ____|_       ___|   |___.' 
+              /_/_____/____/_______|`,
     rarity: "common",
   },
   {
@@ -120,14 +120,14 @@ Frogs were the first land animals with vocal cords. Male
 frogs have vocal sacs—pouches of skin that fill with air. 
 These balloons resonate sounds like a megaphone, and 
 some frog sounds can be heard from a mile away.`,
-    ascii: `              _         _
-  __   ___.--'_\`.     .'_\`--.___   __
- ( _\`.'. -   'o\` )   ( 'o\`   - .\`.'_ )
- _\\.'_'      _.-'     \`-._      \`_\`./_
-( \\\`. )    //\\\`         '/\\\\    ( .'/ )
- \\_\`-'\`---'\\\\__,       ,__//\`---'\`-'_/
-  \\\`        \`-\\         /-'        '/
-   \`                               '     `,
+    ascii: `                  _         _
+      __   ___.--'_\`.     .'_\`--.___   __
+     ( _\`.'. -   'o\` )   ( 'o\`   - .\`.'_ )
+     _\\.'_'      _.-'     \`-._      \`_\`./_
+    ( \\\`. )    //\\\`         '/\\\\    ( .'/ )
+     \\_\`-'\`---'\\\\__,       ,__//\`---'\`-'_/
+      \\\`        \`-\\         /-'        '/
+       \`                               '     `,
     rarity: "common",
   },
   {
