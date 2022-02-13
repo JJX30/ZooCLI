@@ -7,7 +7,10 @@ import titleFrames from "./titleFrames.js";
 import inquirer from "inquirer";
 import { createSpinner } from "nanospinner";
 import animalData from "./animalData.js";
-import commonAnimals from "./animalData.js";
+import commonAnimals from "./commonAnimals";
+import rareAnimals from "./rareAnimals.js";
+import epicAnimals from "./epicAnimals.js";
+import legendaryAnimals from "./legendaryAnimals.js";
 
 let usersAnimals = [
   {
