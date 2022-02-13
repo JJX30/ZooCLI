@@ -6,6 +6,8 @@ import introFrames from "./introFrames.js";
 import titleFrames from "./titleFrames.js";
 import inquirer from "inquirer";
 import { createSpinner } from "nanospinner";
+import animalData from "./animalData.js";
+import commonAnimals from "./animalData.js";
 
 let usersAnimals = [
   {
@@ -366,7 +368,16 @@ async function explore() {
 
 async function displayEncounter() {
   const randomVal = getRandomInt(1, 100);
-  if (randomVal >= 1 && randomVal <= 5) {
+  const biome;
+
+  if (randomVal >= 96 && randomVal <= 100) { // 5%
+    //go into legendary array, make a random value from 0 to legendaryarray.length, use that val to get a random legendsary
+  } else if(randomVal >=95 && randomVal <= 76){ //20%
+    //epic
+  }else if(randomVal >= 75 && randomVal <= 46){ //30%
+
+  }else { //45%
+    
   }
 }
 
@@ -383,8 +394,7 @@ async function displayAnimalList() {
     ,,;;,;;;,;;;,;;;,;;;,;;;,;;;,;;,;;;,;;;,;;,,
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;`)
   );
-
-  console.log();
+  sconsole.log();
 }
 
 async function zooMenu() {
