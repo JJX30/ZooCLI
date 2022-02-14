@@ -7,10 +7,37 @@ import titleFrames from "./titleFrames.js";
 import inquirer from "inquirer";
 import { createSpinner } from "nanospinner";
 import animalData from "./animalData.js";
-import commonAnimals from "./commonAnimals";
+import commonAnimals from "./commonAnimals.js";
 import rareAnimals from "./rareAnimals.js";
 import epicAnimals from "./epicAnimals.js";
 import legendaryAnimals from "./legendaryAnimals.js";
+
+const commonColorArray = [
+  "blue",
+  "green",
+  "pink",
+  "red",
+  "yellow",
+  "orange",
+  "magenta",
+  "cyan",
+  "white",
+];
+
+const rareColorArray = [
+  "cristal",
+  "teen",
+  "mind",
+  "morning",
+  "vice",
+  "passion",
+  "fruit",
+  "instagram",
+  "atlas",
+  "retro",
+  "summer",
+];
+const legendaryColorArray = ["pastel", "rain"];
 
 let usersAnimals = [
   {
@@ -308,6 +335,7 @@ async function welcome() {
   Rescue them, care for them, and show them off to 
   fellow Zoo Keepers! `)
   );
+  await mainMenu();
 }
 
 async function mainMenu() {
@@ -366,21 +394,170 @@ async function enterZoo() {
 async function explore() {
   console.clear();
   console.log(jungleGradient.multiline(introFrames[introFrames.length - 1]));
-  await displayEncounter();
+  const animalEncountered = await getRandomAnimal();
+  console.log(titleGradient.multiline(animalEncountered.biome));
+  console.log(
+    jungleGradient.multiline(
+      "oooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+    )
+  );
+  console.log();
+  const spinner = createSpinner("Exploring the vast wilderness...").start();
+  await exploring();
+  console.clear();
+  console.log(jungleGradient.multiline(introFrames[introFrames.length - 1]));
+  console.log(await coloredAnimal(animalEncountered));
+  console.log(
+    jungleGradient.multiline(
+      "oooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+    )
+  );
+  spinner.success({
+    text: "You encountered a wild " + animalEncountered.name.trim() + ".",
+  });
+  await exploreOptions();
 }
 
-async function displayEncounter() {
-  const randomVal = getRandomInt(1, 100);
-  const biome;
+async function exploreOptions() {
+  console.log();
+  const answer = await inquirer.prompt({
+    type: "list",
+    name: "options",
+    message: "Select an option:",
+    choices: ["Catch", "Run"],
+  });
 
-  if (randomVal >= 96 && randomVal <= 100) { // 5%
+  return handleExploreOptions(answer.options);
+}
+
+async function handleExploreOptions(choice) {
+  if (choice === "Catch") {
+    //do something
+  } else {
+    await welcomeScreen();
+  }
+}
+
+async function coloredAnimal(animal) {
+  if (animal.color === "blue") {
+    return gradient("blue", "blue").multiline(animal.ascii);
+  } else if (animal.color === "green") {
+    return gradient("green", "green").multiline(animal.ascii);
+  } else if (animal.color === "pink") {
+    return gradient("pink", "pink").multiline(animal.ascii);
+  } else if (animal.color === "red") {
+    return gradient("red", "red").multiline(animal.ascii);
+  } else if (animal.color === "yellow") {
+    return gradient("yellow", "yellow").multiline(animal.ascii);
+  } else if (animal.color === "orange") {
+    return gradient("orange", "orange").multiline(animal.ascii);
+  } else if (animal.color === "magenta") {
+    return gradient("magenta", "magenta").multiline(animal.ascii);
+  } else if (animal.color === "cyan") {
+    return gradient("cyan", "cyan").multiline(animal.ascii);
+  } else if (animal.color === "white") {
+    return gradient("white", "white").multiline(animal.ascii);
+  } else if (animal.color === "cristal") {
+    return gradient.cristal.multiline(animal.ascii);
+  } else if (animal.color === "teen") {
+    return gradient.teen.multiline(animal.ascii);
+  } else if (animal.color === "mind") {
+    return gradient.mind.multiline(animal.ascii);
+  } else if (animal.color === "morning") {
+    return gradient.morning.multiline(animal.ascii);
+  } else if (animal.color === "vice") {
+    return gradient.vice.multiline(animal.ascii);
+  } else if (animal.color === "passion") {
+    return gradient.passion.multiline(animal.ascii);
+  } else if (animal.color === "fruit") {
+    return gradient.fruit.multiline(animal.ascii);
+  } else if (animal.color === "instagram") {
+    return gradient.instagram.multiline(animal.ascii);
+  } else if (animal.color === "atlas") {
+    return gradient.atlas.multiline(animal.ascii);
+  } else if (animal.color === "retro") {
+    return gradient.retro.multiline(animal.ascii);
+  } else if (animal.color === "summer") {
+    return gradient.summer.multiline(animal.ascii);
+  } else if (animal.color === "pastel") {
+    return gradient.pastel.multiline(animal.ascii);
+  } else if (animal.color === "rainbow") {
+    return gradient.rainbow.multiline(animal.ascii);
+  }
+}
+
+async function getRandomAnimal() {
+  const rarityVal = getRandomInt(1, 100);
+  const randomColor = await getRandomColor();
+  let randomAnimal = {
+    name: "",
+    type: "",
+    biome: "",
+    color: "",
+    description: "",
+    ascii: ``,
+    rarity: "",
+  };
+  if (rarityVal >= 96 && rarityVal <= 100) {
+    // 5%
     //go into legendary array, make a random value from 0 to legendaryarray.length, use that val to get a random legendsary
-  } else if(randomVal >=95 && randomVal <= 76){ //20%
+    const index = getRandomInt(0, legendaryAnimals.length - 1);
+    randomAnimal.name = legendaryAnimals[index].name;
+    randomAnimal.type = legendaryAnimals[index].type;
+    randomAnimal.biome = legendaryAnimals[index].biome;
+    randomAnimal.color = randomColor;
+    randomAnimal.description = legendaryAnimals[index].description;
+    randomAnimal.ascii = legendaryAnimals[index].ascii;
+    randomAnimal.rarity = legendaryAnimals[index].rarity;
+    return randomAnimal;
+  } else if (rarityVal >= 95 && rarityVal <= 76) {
+    //20%
     //epic
-  }else if(randomVal >= 75 && randomVal <= 46){ //30%
+    const index = getRandomInt(0, epicAnimals.length - 1);
+    randomAnimal.name = epicAnimals[index].name;
+    randomAnimal.type = epicAnimals[index].type;
+    randomAnimal.biome = epicAnimals[index].biome;
+    randomAnimal.color = randomColor;
+    randomAnimal.description = epicAnimals[index].description;
+    randomAnimal.ascii = epicAnimals[index].ascii;
+    randomAnimal.rarity = epicAnimals[index].rarity;
+    return randomAnimal;
+  } else if (rarityVal >= 75 && rarityVal <= 46) {
+    //30%
+    const index = getRandomInt(0, rareAnimals.length - 1);
+    randomAnimal.name = rareAnimals[index].name;
+    randomAnimal.type = rareAnimals[index].type;
+    randomAnimal.biome = rareAnimals[index].biome;
+    randomAnimal.color = randomColor;
+    randomAnimal.description = rareAnimals[index].description;
+    randomAnimal.ascii = rareAnimals[index].ascii;
+    randomAnimal.rarity = rareAnimals[index].rarity;
+    return randomAnimal;
+  } else {
+    //45%
+    const index = getRandomInt(0, commonAnimals.length - 1);
+    randomAnimal.name = commonAnimals[index].name;
+    randomAnimal.type = commonAnimals[index].type;
+    randomAnimal.biome = commonAnimals[index].biome;
+    randomAnimal.color = randomColor;
+    randomAnimal.description = commonAnimals[index].description;
+    randomAnimal.ascii = commonAnimals[index].ascii;
+    randomAnimal.rarity = commonAnimals[index].rarity;
+    return randomAnimal;
+  }
+}
 
-  }else { //45%
-    
+async function getRandomColor() {
+  const colorVal = getRandomInt(1, 100);
+  if (colorVal >= 91 && colorVal <= 100) {
+    const index = getRandomInt(0, legendaryColorArray.length - 1);
+    return legendaryColorArray[index];
+  } else if (colorVal >= 90 && colorVal <= 51) {
+    const index = getRandomInt(0, rareColorArray.length - 1);
+    return rareColorArray[index];
+  } else {
+    const index = getRandomInt(0, commonColorArray.length - 1);
+    return commonColorArray[index];
   }
 }
 
@@ -397,7 +574,7 @@ async function displayAnimalList() {
     ,,;;,;;;,;;;,;;;,;;;,;;;,;;;,;;,;;;,;;;,;;,,
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;`)
   );
-  sconsole.log();
+  console.log();
 }
 
 async function zooMenu() {
@@ -523,4 +700,3 @@ Object.defineProperty(String.prototype, "capitalize", {
 });
 
 await welcome();
-await mainMenu();
