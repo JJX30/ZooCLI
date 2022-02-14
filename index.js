@@ -11,6 +11,7 @@ import commonAnimals from "./commonAnimals.js";
 import rareAnimals from "./rareAnimals.js";
 import epicAnimals from "./epicAnimals.js";
 import legendaryAnimals from "./legendaryAnimals.js";
+import encounterFrames from "./encouterType.js";
 
 const commonColorArray = [
   "blue",
@@ -39,226 +40,7 @@ const rareColorArray = [
 ];
 const legendaryColorArray = ["pastel", "rain"];
 
-let usersAnimals = [
-  {
-    name: "Dog",
-    type: "Canis lupus familiaris",
-    biome: "forest",
-    color: "blue",
-    description: `
-Dogs can smell thousands of times better than humans. 
-Their noses have millions more scent receptors—for 
-example, a human nose averages 5 million while a 
-Dachshund's nose has 125 million—making them useful 
-in sniffing out drugs, dead bodies, bed bugs, 
-explosives, and more.`,
-    ascii: `                 |\\_/|                  
-                 | @ @   Woof! 
-                 |   <>              _  
-                 |  _/\\------____ ((| |))
-                 |               \`--' |   
-              ____|_       ___|   |___.' 
-              /_/_____/____/_______|`,
-    rarity: "common",
-  },
-  {
-    name: "Cat",
-    type: "Felis catus",
-    biome: "forest",
-    color: "green",
-    description: `
-Predation by domestic cats is the number-one direct, 
-human-caused threat to birds in the United States and 
-Canada. In the United States alone, outdoor cats kill 
-approximately 2.4 billion birds every year. Although 
-this number may seem unbelievable, it represents the 
-combined impact of tens of millions of outdoor cats.`,
-    ascii: `                      _                        
-                    \\\`*-.                    
-                     )  _\`-.                 
-                    .  : \`. .                
-                    : _   '  \\               
-                    ; *\` _.   \`*-._          
-                    \`-.-'          \`-.       
-                      ;       \`       \`.     
-                      :.       .        \\    
-                      . \\  .   :   .-'   .   
-                      '  \`+.;  ;  '      :   
-                      :  '  |    ;       ;-. 
-                      ; '   : :\`-:     _.\`* ;
-                   .*' /  .*' ; .*\`- +'  \`*' 
-                   \`*-*   \`*-*  \`*-*'        
-`,
-    rarity: "common",
-  },
-  {
-    name: "Moose",
-    type: "Alces alces",
-    biome: "forest",
-    color: "rainbow",
-    description: `
-If an antler is knocked against a tree during the 
-velvet stage, it will bleed. ... At full size, 
-antlers harden beneath their velvet and the blood 
-supply stops. The dead and dry velvet peels off 
-in strips, aided by the bucks' vigorous rubbing 
-against trees and bushes. Most bucks shed their 
-antlers in January and February.`,
-    ascii: `             ,
-       ,   , |-_      ,           ,  ,
-      (_  ,' ( \\)  :  |           ' ,'
-        \\_(  ( :| _,_,'     ''',  ;,'
-      ,   '\\_\\\\ ',-'          ,', ,,    ,
-     ,'  ,   '\\ ,| ,           ''_.',   ',  ,
-  .' ,  ',:   )\\ |,'           '-- (     ',-'
-  ',,'    ':_;)_,'\\               ) \\__,,-'
-(__(:_ ,      \\ ,  \\_            / ,--''
-    \\_,'_,     \\\\ /''-,        __) )
-      '._',__ ._\\(_   ____,--''_,-'
-    (_') (   )(  /_''',___,--''--.'
-      / __===((_(_)  (,"";"
-     (/'  ,"7,---.__,""_;"    
-        _,-""" __   ("" ""--..___..----.........--------""""""---._  _
-   _,--"      ;O") )))  \`\` :.\`\`:.\` \`\` \`\`\` \`  \`\`  .\`\`\` . .. ; . .::""":"=
-  (( "(  7/,,  \`  )  :      : \` : \`        .      . \`\` . .. ; ::..:"  :)\\
-   \\__'__,._  ,,,""    :               :    .      . \`\` . .. ;: .. :" :((\\
-            """",      :              :.     .    .  \`\` . ..; . :.:" :  "\`
-                \\;;     :           ::.       .   .    \`\` : .:. : .:";
-                |; ;     :        ...:        .       , ;;:. ;. : . :;
-                |;  ;     ::    ..::\`        .     , ,,;;;) ;. : ..:;:
-                ;;   ;;      ..::\` ;;;  ,  ,   ,  ,  ,;;;;) . : ..:; :
-                \`;;    ;;;  :::\`\`;;; ;;;,,;;,;;,,;;,;;;;;( ; .. :.; (
-                 \`;;;     __    :: (;;;;;;;;;;;;;;;;;;;;;_\\  ; ;. ; :
-                  \`;;;;;;\`;:"\\";;:/""\`\`\`\`\`\`\`\`\`\`\`\`\`"""""    \\;;;. / :(
-                    \`\`\`\` \\:::|;;;/                          \\;;;;| :\\
-                          |::;;;;;                           ":;;;|::\\
-                          ::;\\;;;;                            ":;;\\::(
-                          ::; \\;;|                             \\;;(:::)
-                          |:; |;;|                             );;)|::/
-                          /:: \\;;;                             ;;/ \\:|
-                          ;:: |;;)                            ;;|  ;:|
-                          ;::  ;;|                            ;;|  ;:|
-                         ./:;  /;|                           ;;/   ;:|
-                       _.;:(  /;(                         _./:(   _;:(
-                      ;__;-\\\`;_;_\\\\                      ;__;-\\  ;;_;\\\\`,
-    rarity: "common",
-  },
-  {
-    name: "Frog",
-    type: "Rhinella marina",
-    biome: "city",
-    color: "green",
-    description: `
-Frogs were the first land animals with vocal cords. Male 
-frogs have vocal sacs—pouches of skin that fill with air. 
-These balloons resonate sounds like a megaphone, and 
-some frog sounds can be heard from a mile away.`,
-    ascii: `                  _         _
-      __   ___.--'_\`.     .'_\`--.___   __
-     ( _\`.'. -   'o\` )   ( 'o\`   - .\`.'_ )
-     _\\.'_'      _.-'     \`-._      \`_\`./_
-    ( \\\`. )    //\\\`         '/\\\\    ( .'/ )
-     \\_\`-'\`---'\\\\__,       ,__//\`---'\`-'_/
-      \\\`        \`-\\         /-'        '/
-       \`                               '     `,
-    rarity: "common",
-  },
-  {
-    name: "Tas. Dev'l",
-    type: "Sarcophilus harrisii",
-    biome: "city",
-    color: "yellow",
-    description: `
-Tasmanian 'devils' are named for the sound they make. In 
-fact, the first European settlers to enter Tasmania (the 
-southern state where they are found) began hearing 
-unearthly, blood-curdling shrieks and growls from 
-deep within the bush, making them imagine that 
-demons surrounded them in the wilderness. Hence: 
-Tasmanian 'devils'.`,
-    ascii: `                                              ^             
-                                             / \\           ^
-                       _,-~~~--~~~--._      (   \\         / \\
-                   _,-'               \`.__  (    \\_.---._/   )
-                 ,'                       \`-(_\` -'       \`-. )   
-                /       "--..                \\.'           \`/  
-               ,             \`-.              :  _  .-.  _  : 
-              /                 ;             : (0).oYo.(0) ;
-            /                    \`             \\.-'V'"'V'-./
-           /                     '              \\\\^     ^//
-  /\\      /                      '     :    : .-'\\\\^   ^//
- ;  \\    ;   /                  ,'  _.-\`.    \`. : \\\\^_^//
- ;   \\   ;  ;\`.               ,'~~-'     \`.    \`.\`.\`-.-'
-  \\   |_/   ;  \`.        /-'/___.---.      \`-.   \`.\`---.
-   \\       /     |      /____.---.)))         \`-. \`---.\\
-    \\_____/      (____________))))\\\\\\            \`-.\\\\\\\\
-                               \\\\\\\\`,
-    rarity: "epic",
-  },
-  {
-    name: "Rhinoceros",
-    type: "Rhinocerotidae",
-    biome: "desert",
-    color: "orange",
-    description: `
-The names of black and white rhinos are misleading - as 
-both are actually grey. The white rhino is said to have 
-gotten its name from the Afrikaans word for wide ('wyd'), 
-referring to its wide, square lip (in contrast, black 
-rhinos have a pointy upper lip). Early English explorers 
-mistook this word for 'white' and consequently named 
-this species 'white' rhino, and the other 'black' rhino 
-to differentiate.`,
-    ascii: `              _                 __                 
-      __.--**"""**--...__..--**""""*-.            
-    .'                                \`-.         
-  .'                         _           \\        
- /                         .'        .    \\   _._ 
-:                         :          :\`*.  :-'.' ;
-;    \`                    ;          \`.) \\   /.-' 
-:     \`                             ; ' -*   ;    
-       :.    \\           :       :  :        :    
- ;     ; \`.   \`.         ;     \` |  '             
- |         \`.            \`. -*"*\\; /        :     
- |    :     /\`-.           \`.    \\/\`.'  _    \`.   
- :    ;    :    \`*-.__.-*""":\`.   \\ ;  'o\` \`. /   
-       ;   ;                ;  \\   ;:       ;:   ,/
-  |  | |                       /\`  | ,      \`*-*'/ 
-  \`  : :  :                /  /    | : .    ._.-'  
-   \\  \\ ,  \\              :   \`.   :  \\ \\   .'     
-    :  *:   ;             :    |\`*-'   \`*+-*       
-    \`**-*\`""               *---*`,
-    rarity: "rare",
-  },
-  {
-    name: "Kangaroo",
-    type: "Macropodidae",
-    biome: "city",
-    color: "red",
-    description: `
-Unlike other animals, kangaroos are not born with muscles. 
-They are underdeveloped when they are born. Hence, joeys 
-stay in their mother's pouch. As they grow at around six 
-months, they have well-developed muscles other body parts 
-and they leave their mother's pouch and start hopping on 
-each foot.`,
-    ascii: `                                                  _  _
-                                                 (\\\\( \\
-                                                  \`.\\-.)
-                              _...._            _,-'   \`-.
-\\                           ,'      \`-._.---.,-'       .  \\
- \\\`.                      ,'                               \`.
-  \\ \`-...__              /                           .   .:  y
-   \`._     \`\`--..__     /                           ,'\`---._/
-      \`-._         \`\`--'                      |    /_
-          \`.._                   _            ;   <_ \\
-              \`--.___             \`.           \`-._ \\ \\
-                     \`--<           \`.     (\\ _/)/ \`.\\/
-                         \\            \\     \``,
-    rarity: "epic",
-  },
-  { name: "[GO BACK]" },
-];
+let usersAnimals = [{ name: "[GO BACK]" }];
 
 const clearLastLines = (count) => {
   process.stdout.moveCursor(0, -count);
@@ -364,7 +146,7 @@ async function enterZoo() {
   console.clear();
   console.log(jungleGradient.multiline(introFrames[introFrames.length - 1]));
   console.log(gradient("yellow", "orange")("Exhibits: "));
-  if (usersAnimals.length === 0) {
+  if (usersAnimals.length === 1) {
     console.log();
     console.log(
       titleGradient.multiline(
@@ -378,6 +160,7 @@ async function enterZoo() {
         "oooooooooooooooooooooooooooooooooooooooooooooooooooooo"
       )
     );
+    await zooMenu();
   } else {
     console.log();
     await displayAnimalList();
@@ -395,7 +178,7 @@ async function explore() {
   console.clear();
   console.log(jungleGradient.multiline(introFrames[introFrames.length - 1]));
   const animalEncountered = await getRandomAnimal();
-  console.log(titleGradient.multiline(animalEncountered.biome));
+  console.log(titleGradient.multiline(getBiome(animalEncountered)));
   console.log(
     jungleGradient.multiline(
       "oooooooooooooooooooooooooooooooooooooooooooooooooooooo"
@@ -406,19 +189,26 @@ async function explore() {
   await exploring();
   console.clear();
   console.log(jungleGradient.multiline(introFrames[introFrames.length - 1]));
-  console.log(await coloredAnimal(animalEncountered));
+  console.log(coloredAnimal(animalEncountered));
   console.log(
     jungleGradient.multiline(
       "oooooooooooooooooooooooooooooooooooooooooooooooooooooo"
     )
   );
+  console.log();
+  console.log("Scientific Name: " + titleGradient(animalEncountered.type));
+  console.log();
+  console.log(
+    "Rarity: " + titleGradient(animalEncountered.rarity.capitalize())
+  );
+  console.log();
   spinner.success({
     text: "You encountered a wild " + animalEncountered.name.trim() + ".",
   });
-  await exploreOptions();
+  await exploreOptions(animalEncountered);
 }
 
-async function exploreOptions() {
+async function exploreOptions(animal) {
   console.log();
   const answer = await inquirer.prompt({
     type: "list",
@@ -427,18 +217,34 @@ async function exploreOptions() {
     choices: ["Catch", "Run"],
   });
 
-  return handleExploreOptions(answer.options);
+  return handleExploreOptions(answer.options, animal);
 }
 
-async function handleExploreOptions(choice) {
+async function handleExploreOptions(choice, animal) {
   if (choice === "Catch") {
-    //do something
+    //GAME SYSTEM CATCH MAYBE?
+    usersAnimals.push(animal);
+    const spinner = createSpinner("Catching animal...").start();
+    await exploring();
+    spinner.success({
+      text: "You successfully caught the wild " + animal.name.trim() + ".",
+    });
+    await sleep();
+    await welcomeScreen();
   } else {
     await welcomeScreen();
   }
 }
 
-async function coloredAnimal(animal) {
+function getBiome(animal) {
+  for (let i = 0; i < encounterFrames.length; i++) {
+    if (encounterFrames[i].type === animal.biome) {
+      return encounterFrames[i].ascii;
+    }
+  }
+}
+
+function coloredAnimal(animal) {
   if (animal.color === "blue") {
     return gradient("blue", "blue").multiline(animal.ascii);
   } else if (animal.color === "green") {
@@ -498,7 +304,7 @@ async function getRandomAnimal() {
     ascii: ``,
     rarity: "",
   };
-  if (rarityVal >= 96 && rarityVal <= 100) {
+  if (rarityVal >= 81 && rarityVal <= 100) {
     // 5%
     //go into legendary array, make a random value from 0 to legendaryarray.length, use that val to get a random legendsary
     const index = getRandomInt(0, legendaryAnimals.length - 1);
@@ -510,7 +316,7 @@ async function getRandomAnimal() {
     randomAnimal.ascii = legendaryAnimals[index].ascii;
     randomAnimal.rarity = legendaryAnimals[index].rarity;
     return randomAnimal;
-  } else if (rarityVal >= 95 && rarityVal <= 76) {
+  } else if (rarityVal >= 61 && rarityVal <= 80) {
     //20%
     //epic
     const index = getRandomInt(0, epicAnimals.length - 1);
@@ -522,7 +328,7 @@ async function getRandomAnimal() {
     randomAnimal.ascii = epicAnimals[index].ascii;
     randomAnimal.rarity = epicAnimals[index].rarity;
     return randomAnimal;
-  } else if (rarityVal >= 75 && rarityVal <= 46) {
+  } else if (rarityVal >= 21 && rarityVal <= 60) {
     //30%
     const index = getRandomInt(0, rareAnimals.length - 1);
     randomAnimal.name = rareAnimals[index].name;
@@ -644,14 +450,14 @@ async function handleZooAnswer(choice) {
   console.log(titleGradient.multiline(selectedAnimal.description));
   console.log();
   console.log(
-    titleGradient("Scientific Name: " + selectedAnimal.type.capitalize())
+    "Scientific Name: " + titleGradient(selectedAnimal.type.capitalize())
   );
   console.log();
-  console.log(titleGradient("Found in: " + selectedAnimal.biome.capitalize()));
+  console.log("Found in: " + titleGradient(selectedAnimal.biome.capitalize()));
   console.log();
-  console.log(titleGradient("Color: " + selectedAnimal.color.capitalize()));
+  console.log("Color: " + titleGradient(selectedAnimal.color.capitalize()));
   console.log();
-  console.log(titleGradient("Rarity: " + selectedAnimal.rarity.capitalize()));
+  console.log("Rarity: " + titleGradient(selectedAnimal.rarity.capitalize()));
   await returnMenu(selectedAnimal);
 }
 
