@@ -355,10 +355,10 @@ async function getRandomAnimal() {
 
 async function getRandomColor() {
   const colorVal = getRandomInt(1, 100);
-  if (colorVal >= 91 && colorVal <= 100) {
+  if (colorVal >= 100 && colorVal <= 100) {
     const index = getRandomInt(0, legendaryColorArray.length - 1);
     return legendaryColorArray[index];
-  } else if (colorVal >= 90 && colorVal <= 51) {
+  } else if (colorVal >= 1 && colorVal <= 100) {
     const index = getRandomInt(0, rareColorArray.length - 1);
     return rareColorArray[index];
   } else {
