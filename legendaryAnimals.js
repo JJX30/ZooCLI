@@ -10,10 +10,21 @@ const legendaryAnimals = [
     Blue-throated Hummingbird, or as slow as 50-180 beats 
     per minute on a cold night when they experience torpor, 
     a hibernation-like state.`,
-    ascii: `  __/)       __
-  -(__(  ---@./ww
-    \\)     (\\
-            "\``,
+    ascii: `                 ,.
+                 \\ '.
+                  >   ).--.
+                   >  ( o ,=====-
+                 <\`'---.   \`.
+                  /,    )    )
+                   /^/^'    /
+                       ) \\v/))  
+                       /. \\'    
+                     ( ( ) )
+                      . /
+                     / /
+                    : '
+                     /
+                   .' \`.`,
     rarity: "legendary",
   },
   {

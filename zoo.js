@@ -211,25 +211,25 @@ async function handleDevAnswer(choice) {
       );
     }
   });
-  await devMenu2();
+  await devMenu();
 }
 
-async function devMenu2() {
-  console.log();
-  const answer = await inquirer.prompt({
-    type: "list",
-    name: "options",
-    message: "Display:",
-    choices: ["go back"],
-  });
-  return handleDevAnswer2(answer.options);
-}
+// async function devMenu2() {
+//   console.log();
+//   const answer = await inquirer.prompt({
+//     type: "list",
+//     name: "options",
+//     message: "Display:",
+//     choices: ["go back"],
+//   });
+//   return handleDevAnswer2(answer.options);
+// }
 
-async function handleDevAnswer2(choice) {
-  if (choice === "go back") {
-    await devMenu();
-  }
-}
+// async function handleDevAnswer2(choice) {
+//   if (choice === "go back") {
+//     await devMenu();
+//   }
+// }
 
 async function enterZoo() {
   console.clear();

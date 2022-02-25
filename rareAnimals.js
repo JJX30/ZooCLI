@@ -10,13 +10,13 @@ const rareAnimals = [
     an estimated 500 people per year in Africa. 
     Hippos are aggressive creatures, and they 
     have very sharp teeth.`,
-    ascii: `      c~~p ,---------.
-  ,---'oo  )           \\
-  ( O O                  )/
-  \`=^='                 /
-       \\    ,     .   /
-       \\\\  |-----'|  /
-       ||__|    |_|__|`,
+    ascii: `                     c~~p ,---------.
+                ,---'oo  )           \\
+               ( O O                  )/
+                \`=^='                 /
+                      \\    ,     .   /
+                      \\\\  |-----'|  /
+                      ||__|    |_|__|`,
     rarity: "rare",
   },
   {
@@ -56,16 +56,16 @@ const rareAnimals = [
       the same nest year after year. Nests, composed of sticks, 
       vegetation, and downy feathers, are built by both males and 
       females.`,
-    ascii: `      .---.        .-----------
-       /     \\  __  /    ------x
-      / /     \\(  )/    -----
-     //////   ' \\/ \`   ---
-    //// / // :    : ---
-   // /   /  /\`    '--
-  //          //..\\\\
-         ====UU====UU====
-             '//||\\\\\`
-               ''\`\``,
+    ascii: `                 .---.        .-----------
+                /     \\  __  /    ------
+               / /     \\(  )/    -----
+              //////   ' \\/ \`   ---
+             //// / // :    : ---
+            // /   /  /\`    '--
+           //          //..\\\\
+                  ====UU====UU====
+                      '//||\\\\\`
+                        ''\`\``,
     rarity: "rare",
   },
   {

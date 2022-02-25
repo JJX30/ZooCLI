@@ -55,13 +55,13 @@ const animalData = [
     an estimated 500 people per year in Africa. 
     Hippos are aggressive creatures, and they 
     have very sharp teeth.`,
-    ascii: `      c~~p ,---------.
- ,---'oo  )           \\
-( O O                  )/
- \`=^='                 /
-       \\    ,     .   /
-       \\\\  |-----'|  /
-       ||__|    |_|__|`,
+    ascii: `                     c~~p ,---------.
+                ,---'oo  )           \\
+               ( O O                  )/
+                \`=^='                 /
+                      \\    ,     .   /
+                      \\\\  |-----'|  /
+                      ||__|    |_|__|`,
     rarity: "rare",
   },
   {
@@ -76,19 +76,19 @@ const animalData = [
     couple of weeks, but in some cases, 
     they're known to go six to 12 months 
     without eating.`,
-    ascii: ` ___    ___
-( _<    >_ )
-//        \\\\
-\\\\___..___//
- \`-(    )-'
-   _|__|_
-  /_|__|_\\
-  /_|__|_\\
-  /_\\__/_\\
-   \\ || /  _)
-     ||   ( )
-     \\\\___//
-      \`---'`,
+    ascii: `                     ___    ___
+                    ( _<    >_ )
+                    //        \\\\
+                    \\\\___..___//
+                     \`-(    )-'
+                       _|__|_
+                      /_|__|_\\
+                      /_|__|_\\
+                      /_\\__/_\\
+                       \\ || /  _)
+                         ||   ( )
+                         \\\\___//
+                          \`---'`,
     rarity: "common",
   },
   {
@@ -130,23 +130,23 @@ const animalData = [
     the hump will become limp and droop down. 
     With proper food and rest the hump will 
     return to normal.`,
-    ascii: ` ___.-''''-.
-/___  @    |
-',,,,.     |         _.'''''''._
-     '     |        /           \\
-     |     \\    _.-'             \\
-     |      '.-'                  '-.
-     |                               ',
-     |                                '',
-      ',,-,                           ':;
-           ',,| ;,,                 ,' ;;
-              ! ; !'',,,',',,,,'!  ;   ;:
-             : ;  ! !       ! ! ;  ;   :;
-             ; ;   ! !      ! !  ; ;   ;,
-            ; ;    ! !     ! !   ; ;     
-            ; ;    ! !    ! !     ; ;
-           ;,,      !,!   !,!     ;,;
-           /_I      L_I   L_I     /_I`,
+    ascii: `       ___.-''''-.
+      /___  @    |
+      ',,,,.     |         _.'''''''._
+           '     |        /           \\
+           |     \\    _.-'             \\
+           |      '.-'                  '-.
+           |                               ',
+           |                                '',
+            ',,-,                           ':;
+                 ',,| ;,,                 ,' ;;
+                    ! ; !'',,,',',,,,'!  ;   ;:
+                   : ;  ! !       ! ! ;  ;   :;
+                   ; ;   ! !      ! !  ; ;   ;,
+                  ; ;    ! !     ! !   ; ;     
+                  ; ;    ! !    ! !     ; ;
+                 ;,,      !,!   !,!     ;,;
+                 /_I      L_I   L_I     /_I`,
     rarity: "common",
   },
   {
@@ -160,10 +160,21 @@ const animalData = [
     Blue-throated Hummingbird, or as slow as 50-180 beats 
     per minute on a cold night when they experience torpor, 
     a hibernation-like state.`,
-    ascii: `  __/)       __
--(__(  ---@./ww
-    \\)     (\\
-            "\``,
+    ascii: `                 ,.
+                 \\ '.
+                  >   ).--.
+                   >  ( o ,=====-
+                 <\`'---.   \`.
+                  /,    )    )
+                   /^/^'    /
+                       ) \\v/))  
+                       /. \\'    
+                     ( ( ) )
+                      . /
+                     / /
+                    : '
+                     /
+                   .' \`.`,
     rarity: "legendary",
   },
   {
@@ -177,16 +188,16 @@ const animalData = [
     the same nest year after year. Nests, composed of sticks, 
     vegetation, and downy feathers, are built by both males and 
     females.`,
-    ascii: `      .---.        .-----------
-     /     \\  __  /    ------x
-    / /     \\(  )/    -----
-   //////   ' \\/ \`   ---
-  //// / // :    : ---
- // /   /  /\`    '--
-//          //..\\\\
-       ====UU====UU====
-           '//||\\\\\`
-             ''\`\``,
+    ascii: `                 .---.        .-----------
+                /     \\  __  /    ------
+               / /     \\(  )/    -----
+              //////   ' \\/ \`   ---
+             //// / // :    : ---
+            // /   /  /\`    '--
+           //          //..\\\\
+                  ====UU====UU====
+                      '//||\\\\\`
+                        ''\`\``,
     rarity: "rare",
   },
   {

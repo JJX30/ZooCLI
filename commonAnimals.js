@@ -11,13 +11,13 @@ const commonAnimals = [
     Dachshund's nose has 125 million—making them useful 
     in sniffing out drugs, dead bodies, bed bugs, 
     explosives, and more.`,
-    ascii: `     |\\_/|                  
-     | @ @   Woof! 
-     |   <>              _  
-     |  _/\\------____ ((| |))
-     |               \`--' |   
-  ____|_       ___|   |___.' 
-  /_/_____/____/_______|`,
+    ascii: `                    |\\_/|                  
+                    | @ @   Woof! 
+                    |   <>              _  
+                    |  _/\\------____ ((| |))
+                    |               \`--' |   
+                ____|_       ___|   |___.' 
+              /_/_____/____/_______|`,
     rarity: "common",
   },
   {
@@ -32,19 +32,19 @@ const commonAnimals = [
     couple of weeks, but in some cases, 
     they're known to go six to 12 months 
     without eating.`,
-    ascii: ` ___    ___
-  ( _<    >_ )
-  //        \\\\
-  \\\\___..___//
-  \`-(    )-'
-    _|__|_
-   /_|__|_\\
-   /_|__|_\\
-   /_\\__/_\\
-    \\ || /  _)
-       ||   ( )
-      \\\\___//
-       \`---'`,
+    ascii: `                     ___    ___
+                    ( _<    >_ )
+                    //        \\\\
+                    \\\\___..___//
+                     \`-(    )-'
+                       _|__|_
+                      /_|__|_\\
+                      /_|__|_\\
+                      /_\\__/_\\
+                       \\ || /  _)
+                         ||   ( )
+                         \\\\___//
+                          \`---'`,
     rarity: "common",
   },
   {
@@ -60,23 +60,23 @@ const commonAnimals = [
       the hump will become limp and droop down. 
       With proper food and rest the hump will 
       return to normal.`,
-    ascii: ` ___.-''''-.
-  /___  @    |
-  ',,,,.     |         _.'''''''._
-       '     |        /           \\
-       |     \\    _.-'             \\
-       |      '.-'                  '-.
-       |                               ',
-       |                                '',
-        ',,-,                           ':;
-             ',,| ;,,                 ,' ;;
-                ! ; !'',,,',',,,,'!  ;   ;:
-               : ;  ! !       ! ! ;  ;   :;
-               ; ;   ! !      ! !  ; ;   ;,
-              ; ;    ! !     ! !   ; ;     
-              ; ;    ! !    ! !     ; ;
-             ;,,      !,!   !,!     ;,;
-             /_I      L_I   L_I     /_I`,
+    ascii: `       ___.-''''-.
+      /___  @    |
+      ',,,,.     |         _.'''''''._
+           '     |        /           \\
+           |     \\    _.-'             \\
+           |      '.-'                  '-.
+           |                               ',
+           |                                '',
+            ',,-,                           ':;
+                 ',,| ;,,                 ,' ;;
+                    ! ; !'',,,',',,,,'!  ;   ;:
+                   : ;  ! !       ! ! ;  ;   :;
+                   ; ;   ! !      ! !  ; ;   ;,
+                  ; ;    ! !     ! !   ; ;     
+                  ; ;    ! !    ! !     ; ;
+                 ;,,      !,!   !,!     ;,;
+                 /_I      L_I   L_I     /_I`,
     rarity: "common",
   },
   {
