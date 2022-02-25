@@ -211,6 +211,24 @@ async function handleDevAnswer(choice) {
       );
     }
   });
+  await devMenu2();
+}
+
+async function devMenu2() {
+  console.log();
+  const answer = await inquirer.prompt({
+    type: "list",
+    name: "options",
+    message: "Display:",
+    choices: ["go back"],
+  });
+  return handleDevAnswer2(answer.options);
+}
+
+async function handleDevAnswer2(choice) {
+  if (choice === "go back") {
+    await devTools();
+  }
 }
 
 async function enterZoo() {

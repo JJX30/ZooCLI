@@ -11,13 +11,13 @@ const animalData = [
     Dachshund's nose has 125 million—making them useful 
     in sniffing out drugs, dead bodies, bed bugs, 
     explosives, and more.`,
-    ascii: `     |\\_/|                  
-     | @ @   Woof! 
-     |   <>              _  
-     |  _/\\------____ ((| |))
-     |               \`--' |   
- ____|_       ___|   |___.' 
-/_/_____/____/_______|`,
+    ascii: `                    |\\_/|                  
+                    | @ @   Woof! 
+                    |   <>              _  
+                    |  _/\\------____ ((| |))
+                    |               \`--' |   
+                ____|_       ___|   |___.' 
+              /_/_____/____/_______|`,
     rarity: "common",
   },
   {
