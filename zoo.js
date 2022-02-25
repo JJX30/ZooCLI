@@ -227,7 +227,7 @@ async function devMenu2() {
 
 async function handleDevAnswer2(choice) {
   if (choice === "go back") {
-    await devTools();
+    await devMenu();
   }
 }
 
