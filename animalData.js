@@ -1255,5 +1255,6 @@ l   .-~~"-.    /    I
    \`                               '     `,
     rarity: "common",
   },
+  { name: "go back" },
 ];
 export default animalData;

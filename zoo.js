@@ -126,7 +126,14 @@ async function mainMenu() {
     type: "list",
     name: "options",
     message: "Select an option:",
-    choices: ["Enter Zoo", "Explore", "Options", "Credits", "Quit"],
+    choices: [
+      "Enter Zoo",
+      "Explore",
+      "Options",
+      "Credits",
+      "Dev tools",
+      "Quit",
+    ],
   });
 
   return handleAnswer(answer.options);
@@ -139,7 +146,71 @@ async function handleAnswer(choice) {
     await explore();
   } else if (choice === "Quit") {
     process.exit(1);
+  } else if (choice === "Dev tools") {
+    devTools();
   }
+}
+
+async function devTools() {
+  console.clear();
+  console.log(jungleGradient.multiline(introFrames[introFrames.length - 1]));
+  console.log(gradient("yellow", "orange")("Exhibits: "));
+  console.log();
+  console.log(
+    titleGradient.multiline(
+      `                    _ _.-'\`-._ _
+                   ;.'________'.;
+        _________n.[____________].n_________
+       |""_""_""_""||==||==||==||""_""_""_""]
+       |"""""""""""||..||..||..||"""""""""""|
+       |LI LI LI LI||LI||LI||LI||LI LI LI LI|
+       |.. .. .. ..||..||..||..||.. .. .. ..|
+       |LI LI LI LI||LI||LI||LI||LI LI LI LI|
+    ,,;;,;;;,;;;,;;;,;;;,;;;,;;;,;;,;;;,;;;,;;,,
+   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;`
+    )
+  );
+  console.log();
+  console.log(
+    jungleGradient.multiline(
+      "oooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+    )
+  );
+  await devMenu();
+}
+
+async function devMenu() {
+  console.log();
+  const asciiNames = animalData.map((animal) => {
+    return animal.name;
+  });
+  const answer = await inquirer.prompt({
+    type: "list",
+    name: "options",
+    message: "Display:",
+    choices: asciiNames,
+  });
+  return handleDevAnswer(answer.options);
+}
+
+async function handleDevAnswer(choice) {
+  animalData.map((animal) => {
+    if (choice === animal.name) {
+      console.clear();
+      console.log(
+        jungleGradient.multiline(introFrames[introFrames.length - 1])
+      );
+      console.log(gradient("yellow", "orange")("Exhibits: "));
+      console.log();
+      console.log(titleGradient.multiline(animal.ascii));
+      console.log();
+      console.log(
+        jungleGradient.multiline(
+          "oooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+        )
+      );
+    }
+  });
 }
 
 async function enterZoo() {
@@ -304,7 +375,7 @@ async function getRandomAnimal() {
     ascii: ``,
     rarity: "",
   };
-  if (rarityVal >= 81 && rarityVal <= 100) {
+  if (rarityVal >= 95 && rarityVal <= 100) {
     // 5%
     //go into legendary array, make a random value from 0 to legendaryarray.length, use that val to get a random legendsary
     const index = getRandomInt(0, legendaryAnimals.length - 1);
@@ -316,8 +387,8 @@ async function getRandomAnimal() {
     randomAnimal.ascii = legendaryAnimals[index].ascii;
     randomAnimal.rarity = legendaryAnimals[index].rarity;
     return randomAnimal;
-  } else if (rarityVal >= 61 && rarityVal <= 80) {
-    //20%
+  } else if (rarityVal >= 70 && rarityVal <= 94) {
+    //25%
     //epic
     const index = getRandomInt(0, epicAnimals.length - 1);
     randomAnimal.name = epicAnimals[index].name;
@@ -328,7 +399,7 @@ async function getRandomAnimal() {
     randomAnimal.ascii = epicAnimals[index].ascii;
     randomAnimal.rarity = epicAnimals[index].rarity;
     return randomAnimal;
-  } else if (rarityVal >= 21 && rarityVal <= 60) {
+  } else if (rarityVal >= 40 && rarityVal <= 69) {
     //30%
     const index = getRandomInt(0, rareAnimals.length - 1);
     randomAnimal.name = rareAnimals[index].name;
@@ -355,10 +426,10 @@ async function getRandomAnimal() {
 
 async function getRandomColor() {
   const colorVal = getRandomInt(1, 100);
-  if (colorVal >= 100 && colorVal <= 100) {
+  if (colorVal >= 90 && colorVal <= 100) {
     const index = getRandomInt(0, legendaryColorArray.length - 1);
     return legendaryColorArray[index];
-  } else if (colorVal >= 1 && colorVal <= 100) {
+  } else if (colorVal >= 50 && colorVal <= 89) {
     const index = getRandomInt(0, rareColorArray.length - 1);
     return rareColorArray[index];
   } else {
