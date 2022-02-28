@@ -90,10 +90,10 @@ const commonAnimals = [
       an owl's legs can look extraordinarily slim and delicate! 
       This, along with short thighs and long feet, are primarily 
       adaptations for a single purpose: flight.`,
-    ascii: ` /\\ /\\ 
-  ((ovo))
-  ():::()
-    VVV`,
+    ascii: `                     /\\ /\\ 
+                    ((ovo))
+                    ():::()
+                      VVV`,
     rarity: "common",
   },
   {
@@ -106,16 +106,16 @@ const commonAnimals = [
       using rocks as they float on their backs, but they've also been 
       observed using rocks along the shoreline as “anvils” to crack 
       open mussels, clams and crabs.`,
-    ascii: `  .-"""-.
-   /      o\\
-  |    o   0).-.
-  |       .-;(_/     .-.
-   \\     /  /)).---._|  \`\\   ,
-    '.  '  /((       \`'-./ _/|
-      \\  .'  )        .-.;\`  /
-       '.             |  \`\\-'
-         '._        -'    /
-            \`\`""--\`------\``,
+    ascii: `                 .-"""-.
+                /      o\\
+               |    o   0).-.
+               |       .-;(_/     .-.
+                \\     /  /)).---._|  \`\\   ,
+                 '.  '  /((       \`'-./ _/|
+                   \\  .'  )        .-.;\`  /
+                    '.             |  \`\\-'
+                      '._        -'    /
+                         \`\`""--\`------\``,
     rarity: "common",
   },
   {
@@ -129,19 +129,19 @@ const commonAnimals = [
       used to tear apart softer prey such as worms or fish. These claws 
       can be on different sides of a lobster's body, as the crusher claw 
       is always on the lobster's dominant side.`,
-    ascii: `                         ,.---.   
-                 ,,,,     /    _ \`.
-                  \\\\\\\\   /      \\  )
-                   |||| /\\/\`\`-.__\\/
-                   ::::/\\/_
-   {{\`-.__.-'(\`(^^(^^^(^ 9 \`.========='
-  {{{{{{ { ( ( (  (   (-----:=
-   {{.-'~~'-.(,(,,(,,,(__6_.'=========.
-                   ::::\\/\\ 
-                   |||| \\/\\  ,-'/\\
-                  ////   \\ \`\` _/  )
-                 ''''     \\  \`   /
-                           \`---''`,
+    ascii: `                                 ,.---.   
+                       ,,,,     /    _ \`.
+                        \\\\\\\\   /      \\  )
+                         |||| /\\/\`\`-.__\\/
+                         ::::/\\/_
+         {{\`-.__.-'(\`(^^(^^^(^ 9 \`.========='
+        {{{{{{ { ( ( (  (   (-----:=
+         {{.-'~~'-.(,(,,(,,,(__6_.'=========.
+                         ::::\\/\\ 
+                         |||| \\/\\  ,-'/\\
+                        ////   \\ \`\` _/  )
+                       ''''     \\  \`   /
+                                 \`---''`,
     rarity: "common",
   },
   {
@@ -175,12 +175,12 @@ const commonAnimals = [
       Scientists have proven that goldfish memory spans are nowhere 
       near as short as three seconds. Your goldfish can actually 
       remember things for at least five months.`,
-    ascii: `      /\`·.\¸
-       /\¸...\¸\`:·
-   \¸.·\´  \¸   \`·.\¸.·\´)
-  : © ):\´;      \¸  {
-   \`·.\¸ \`·  \¸.·\´\\\`·\¸)
-       \`\\\\\´\´\\\¸.·\´`,
+    ascii: `                      /\`·.\¸
+                     /\¸...\¸\`:·
+                 \¸.·\´  \¸   \`·.\¸.·\´)
+                : © ):\´;      \¸  {
+                 \`·.\¸ \`·  \¸.·\´\\\`·\¸)
+                     \`\\\\\´\´\\\¸.·\´`,
     rarity: "common",
   },
   {
@@ -194,21 +194,21 @@ const commonAnimals = [
       hardest stomp or the toughest newspaper. They can also 
       flatten themselves to fit into tight spaces and crevices, 
       making for an easy getaway.`,
-    ascii: `     ,--.     .--.
-      /    \\. ./    \\
-     /  /\\ / " \\ /\\  \\
-    / _/  {~~v~~}  \\_ \\
-   /     {   |   }     \
-  ;   /\\{    |    }/\\   \\
-  | _/  {    |    }  \\_  :
-  |     {    |    }      |
-  |    /{    |    }\\     |
-  |   / {    |    } \\    |
-  |  /  {    |    }  \\   |
-  |  \\  \\    |    /  /   |
-  |   \\  \\   |   /  /    |
-  \\    \\  \\  |  /  /     /
-   \\   /   ~~~~~   \\    /    `,
+    ascii: `                  ,--.     .--.
+                 /    \\. ./    \\
+                /  /\\ / " \\ /\\  \\
+               / _/  {~~v~~}  \\_ \\
+              /     {   |   }     \\
+             ;   /\\{    |    }/\\   \\
+             | _/  {    |    }  \\_  :
+             |     {    |    }      |
+             |    /{    |    }\\     |
+             |   / {    |    } \\    |
+             |  /  {    |    }  \\   |
+             |  \\  \\    |    /  /   |
+             |   \\  \\   |   /  /    |
+             \\    \\  \\  |  /  /     /
+              \\   /   ~~~~~   \\    /    `,
     rarity: "common",
   },
   {

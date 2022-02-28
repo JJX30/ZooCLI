@@ -34,11 +34,11 @@ const epicAnimals = [
       (seacows), that live their entire lives in the water, and the 
       only mammals that have adapted to life in the open oceans. 
       Whales breathe air.`,
-    ascii: `    __________...----..____..-'\`\`-..___
+    ascii: `     __________...----..____..-'\`\`-..___
       ,'.                                  \`\`\`--.._
      :                                             \`\`._
      |                           --                    \`\`.
-     |                   -.-      -.     -   -.        \`.
+     |                   -.-      -.     -   -.            \`.
      :                     __           --            .     \\
       \`._____________     (  \`.   -.-      --  -   .   \`     \\
          \`-----------------\\   \\_.--------..__..--.._ \`. \`.   :

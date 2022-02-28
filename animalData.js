@@ -211,10 +211,10 @@ const animalData = [
     an owl's legs can look extraordinarily slim and delicate! 
     This, along with short thighs and long feet, are primarily 
     adaptations for a single purpose: flight.`,
-    ascii: ` /\\ /\\ 
-((ovo))
-():::()
-  VVV`,
+    ascii: `                     /\\ /\\ 
+                    ((ovo))
+                    ():::()
+                      VVV`,
     rarity: "common",
   },
   {
@@ -227,13 +227,13 @@ const animalData = [
     pulses through their mouth or nose and listening to the echo.
     With this echo, the bat can determine the size, shape and 
     texture of objects in its environment.`,
-    ascii: `    =/\\                 /\\=
-    / \\'._   (\\_/)   _.'/ \\
-   / .''._'--(o.o)--'_.''. \\
-  /.' _/ |\`'=/ " \\='\`| \\_ \`.\\
- /\` .' \`\\;-,'\\___/',-;/\` '. '\\
-/.-' jgs   \`\\(-V-)/\`       \`-.\\
-\`            "   "            \``,
+    ascii: `              =/\\                 /\\=
+              / \\'._   (\\_/)   _.'/ \\
+             / .''._'--(o.o)--'_.''. \\
+            /.' _/ |\`'=/ " \\='\`| \\_ \`.\\
+           /\` .' \`\\;-,'\\___/',-;/\` '. '\\
+          /.-'       \`\\(-V-)/\`       \`-.\\
+          \`            "   "            \``,
     rarity: "rare",
   },
   {
@@ -246,16 +246,16 @@ const animalData = [
     using rocks as they float on their backs, but they've also been 
     observed using rocks along the shoreline as “anvils” to crack 
     open mussels, clams and crabs.`,
-    ascii: `  .-"""-.
- /      o\\
-|    o   0).-.
-|       .-;(_/     .-.
- \\     /  /)).---._|  \`\\   ,
-  '.  '  /((       \`'-./ _/|
-    \\  .'  )        .-.;\`  /
-     '.             |  \`\\-'
-       '._        -'    /
-          \`\`""--\`------\``,
+    ascii: `                 .-"""-.
+                /      o\\
+               |    o   0).-.
+               |       .-;(_/     .-.
+                \\     /  /)).---._|  \`\\   ,
+                 '.  '  /((       \`'-./ _/|
+                   \\  .'  )        .-.;\`  /
+                    '.             |  \`\\-'
+                      '._        -'    /
+                         \`\`""--\`------\``,
     rarity: "common",
   },
   {
@@ -269,19 +269,19 @@ const animalData = [
     used to tear apart softer prey such as worms or fish. These claws 
     can be on different sides of a lobster's body, as the crusher claw 
     is always on the lobster's dominant side.`,
-    ascii: `                         ,.---.   
-               ,,,,     /    _ \`.
-                \\\\\\\\   /      \\  )
-                 |||| /\\/\`\`-.__\\/
-                 ::::/\\/_
- {{\`-.__.-'(\`(^^(^^^(^ 9 \`.========='
-{{{{{{ { ( ( (  (   (-----:=
- {{.-'~~'-.(,(,,(,,,(__6_.'=========.
-                 ::::\\/\\ 
-                 |||| \\/\\  ,-'/\\
-                ////   \\ \`\` _/  )
-               ''''     \\  \`   /
-                         \`---''`,
+    ascii: `                                 ,.---.   
+                       ,,,,     /    _ \`.
+                        \\\\\\\\   /      \\  )
+                         |||| /\\/\`\`-.__\\/
+                         ::::/\\/_
+         {{\`-.__.-'(\`(^^(^^^(^ 9 \`.========='
+        {{{{{{ { ( ( (  (   (-----:=
+         {{.-'~~'-.(,(,,(,,,(__6_.'=========.
+                         ::::\\/\\ 
+                         |||| \\/\\  ,-'/\\
+                        ////   \\ \`\` _/  )
+                       ''''     \\  \`   /
+                                 \`---''`,
     rarity: "common",
   },
   {
@@ -294,20 +294,20 @@ const animalData = [
     primarily herbivores, eating mostly seagrasses and algae. This diet 
     is what gives their cartilage and fat a greenish color (not their 
     shells), which is where their name comes from.`,
-    ascii: `               _,.---.---.---.--.._ 
-           _.-' \`--.\`---.\`---'-. _,\`--.._
-          /\`--._ .'.     \`.     \`,\`-.\`-._\\
-         ||   \\  \`.\`---.__\`__..-\`. ,'\`-._/
-    _  ,\`\\ \`-._\\   \\    \`.    \`_.-\`-._,\`\`-.
- ,\`   \`-_ \\/ \`-.\`--.\\    _\\_.-'\\__.-\`-.\`-._\`.
-(_.o> ,--. \`._/'--.-\`,--\`  \\_.-'       \\\`-._ \\
- \`---'    \`._ \`---._/__,----\`           \`-. \`-\\
-           /_, ,  _..-'                    \`-._\\
-           \\_, \\/ ._(
-            \\_, \\/ ._\\
-             \`._,\\/ ._\\
-               \`._// ./\`-._
-                 \`-._-_-_.-'`,
+    ascii: `                  _,.---.---.---.--.._ 
+              _.-' \`--.\`---.\`---'-. _,\`--.._
+             /\`--._ .'.     \`.     \`,\`-.\`-._\\
+            ||   \\  \`.\`---.__\`__..-\`. ,'\`-._/
+       _  ,\`\\ \`-._\\   \\    \`.    \`_.-\`-._,\`\`-.
+    ,\`   \`-_ \\/ \`-.\`--.\\    _\\_.-'\\__.-\`-.\`-._\`.
+   (_.o> ,--. \`._/'--.-\`,--\`  \\_.-'       \\\`-._ \\
+    \`---'    \`._ \`---._/__,----\`           \`-. \`-\\
+              /_, ,  _..-'                    \`-._\\
+              \\_, \\/ ._(
+               \\_, \\/ ._\\
+                \`._,\\/ ._\\
+                  \`._// ./\`-._
+                    \`-._-_-_.-'`,
     rarity: "rare",
   },
   {
@@ -341,11 +341,11 @@ const animalData = [
     (seacows), that live their entire lives in the water, and the 
     only mammals that have adapted to life in the open oceans. 
     Whales breathe air.`,
-    ascii: `    __________...----..____..-'\`\`-..___
+    ascii: `     __________...----..____..-'\`\`-..___
     ,'.                                  \`\`\`--.._
    :                                             \`\`._
    |                           --                    \`\`.
-   |                   -.-      -.     -   -.        \`.
+   |                   -.-      -.     -   -.            \`.
    :                     __           --            .     \\
     \`._____________     (  \`.   -.-      --  -   .   \`     \\
        \`-----------------\\   \\_.--------..__..--.._ \`. \`.   :
@@ -369,12 +369,12 @@ const animalData = [
     Scientists have proven that goldfish memory spans are nowhere 
     near as short as three seconds. Your goldfish can actually 
     remember things for at least five months.`,
-    ascii: `      /\`·.\¸
-     /\¸...\¸\`:·
- \¸.·\´  \¸   \`·.\¸.·\´)
-: © ):\´;      \¸  {
- \`·.\¸ \`·  \¸.·\´\\\`·\¸)
-     \`\\\\\´\´\\\¸.·\´`,
+    ascii: `                      /\`·.\¸
+                     /\¸...\¸\`:·
+                 \¸.·\´  \¸   \`·.\¸.·\´)
+                : © ):\´;      \¸  {
+                 \`·.\¸ \`·  \¸.·\´\\\`·\¸)
+                     \`\\\\\´\´\\\¸.·\´`,
     rarity: "common",
   },
   {
@@ -411,21 +411,21 @@ const animalData = [
     hardest stomp or the toughest newspaper. They can also 
     flatten themselves to fit into tight spaces and crevices, 
     making for an easy getaway.`,
-    ascii: `     ,--.     .--.
-    /    \\. ./    \\
-   /  /\\ / " \\ /\\  \\
-  / _/  {~~v~~}  \\_ \\
- /     {   |   }     \
-;   /\\{    |    }/\\   \\
-| _/  {    |    }  \\_  :
-|     {    |    }      |
-|    /{    |    }\\     |
-|   / {    |    } \\    |
-|  /  {    |    }  \\   |
-|  \\  \\    |    /  /   |
-|   \\  \\   |   /  /    |
-\\    \\  \\  |  /  /     /
- \\   /   ~~~~~   \\    /    `,
+    ascii: `                  ,--.     .--.
+                 /    \\. ./    \\
+                /  /\\ / " \\ /\\  \\
+               / _/  {~~v~~}  \\_ \\
+              /     {   |   }     \\
+             ;   /\\{    |    }/\\   \\
+             | _/  {    |    }  \\_  :
+             |     {    |    }      |
+             |    /{    |    }\\     |
+             |   / {    |    } \\    |
+             |  /  {    |    }  \\   |
+             |  \\  \\    |    /  /   |
+             |   \\  \\   |   /  /    |
+             \\    \\  \\  |  /  /     /
+              \\   /   ~~~~~   \\    /    `,
     rarity: "common",
   },
   {
