@@ -1,6 +1,6 @@
 {
   "name": "zoocli",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A whole interactive Zoo within the comfort of your own command line interface.",
   "main": "zoo.js",
   "type": "module",
