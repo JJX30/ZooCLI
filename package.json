@@ -1,12 +1,13 @@
 {
   "name": "zoocli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A whole interactive Zoo within the comfort of your own command line interface.",
-  "main": "index.js",
+  "main": "zoo.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": "./zoo.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JJX30/ZooCLI.git"

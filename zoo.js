@@ -2,7 +2,6 @@
 
 // import chalk from "chalk";
 import gradient from "gradient-string";
-import introFrames from "./introFrames.js";
 // import titleFrames from "./titleFrames.js";
 // import inquirer from "inquirer";
 import { createSpinner } from "nanospinner";
