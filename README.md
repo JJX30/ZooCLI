@@ -7,7 +7,7 @@
 
 ## 💿 Installation
 
-Use the package manager [npm](https://www.npmjs.com/) to install foobar.
+Use the package manager [npm](https://www.npmjs.com/) to install.
 
 ```bash
 npm i zoocli
